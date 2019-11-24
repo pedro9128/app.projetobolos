@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar *ngFor="let bolo of bolos">
+    <ion-title color="primary">{{bolo.nome}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding" *ngFor="let bolo of bolos">
+    <ion-img [src]="bolo.url"></ion-img>
+    <p>{{bolo.descricao}}</p>
+
+    <ion-button expand="block" routerLink="/carrinho/{{bolo.id}}"
+      >Comprar já.</ion-button
+    >
+  </div>
+</ion-content>

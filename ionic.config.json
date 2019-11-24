@@ -1,0 +1,7 @@
+{
+  "name": "projeto_bolos",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

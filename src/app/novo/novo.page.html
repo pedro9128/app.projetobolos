@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Adicionar bolo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formBolo" (submit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input type="text" formControlName="descricao"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">URL da imagem</ion-label>
+      <ion-input type="text" formControlName="url"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Preço</ion-label>
+      <ion-input type="text" formControlName="preco"></ion-input>
+    </ion-item>
+    <ion-button
+      expand="block"
+      [disabled]="!formBolo.valid"
+      ion-button
+      type="submit"
+      >Confirmar</ion-button
+    >
+  </form>
+</ion-content>

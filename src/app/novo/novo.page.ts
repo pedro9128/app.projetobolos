@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { BolosService } from "../services/bolos.service";
 import { Bolos } from "../models/bolos";
+import { Router } from "@angular/router";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 @Component({
@@ -14,7 +15,8 @@ export class NovoPage implements OnInit {
 
   constructor(
     private bolosService: BolosService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,5 +36,6 @@ export class NovoPage implements OnInit {
       ...this.formBolo.value
     };
     this.bolosService.addBolo(this.bolo).subscribe();
+      this.router.navigate(["/home"]);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { BolosService } from "../services/bolos.service";
 import { Bolos } from "../models/bolos";
 
@@ -7,11 +7,12 @@ import { Bolos } from "../models/bolos";
   templateUrl: "home.page.html",
   styleUrls: ["home.page.scss"]
 })
-export class HomePage {
+export class HomePage{
   bolos: Bolos[];
   constructor(private bolosService: BolosService) {}
 
-  ngOnInit() {
+
+  ionViewDidEnter() {
     this.bolosService.getBolos().subscribe((res: Bolos[]) => {
       this.bolos = res['bolos']
     });

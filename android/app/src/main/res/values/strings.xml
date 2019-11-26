@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">app.projeto_bolos</string>
+    <string name="title_activity_main">app.projeto_bolos</string>
+    <string name="package_name">com.projeto.app</string>
+    <string name="custom_url_scheme">com.projeto.app</string>
+</resources>

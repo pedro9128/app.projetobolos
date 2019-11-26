@@ -8,6 +8,7 @@
   <div class="ion-padding" *ngFor="let bolo of bolos">
     <ion-img [src]="bolo.url"></ion-img>
     <p>{{bolo.descricao}}</p>
+    <h4>Preço: R$ {{bolo.preco}}</h4>
 
     <form [formGroup]="formCadastro" (submit)="onSubmit()">
       <ion-item>

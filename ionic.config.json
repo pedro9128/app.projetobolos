@@ -1,7 +1,8 @@
 {
   "name": "projeto_bolos",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
